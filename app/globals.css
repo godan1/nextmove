@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink antialiased;
+  }
+
+  ::selection {
+    @apply bg-route/20 text-ink;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme("colors.harbor.DEFAULT");
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Stenciled section eyebrow — mono, uppercase, tracked out like a
+     manifest header. Used instead of decorative icons. */
+  .eyebrow {
+    @apply font-mono text-xs font-semibold uppercase tracking-[0.14em] text-route;
+  }
+}

@@ -1,0 +1,51 @@
+import Link from "next/link";
+
+export function SiteFooter() {
+  return (
+    <footer className="border-t border-line bg-ink text-white/80">
+      <div className="container max-w-content grid gap-10 py-14 md:grid-cols-[1.2fr_1fr_1fr]">
+        <div>
+          <span className="font-display text-lg font-semibold tracking-stencil text-white">
+            NextMove
+          </span>
+          <p className="mt-3 max-w-xs text-sm leading-relaxed">
+            NextMove is a local, licensed &amp; insured moving company based in
+            Fredericton, NB. We handle local moves in the Fredericton area and
+            long-distance moves across the Maritimes.
+          </p>
+        </div>
+
+        <nav aria-label="Site" className="text-sm">
+          <p className="eyebrow mb-3 text-white/50">Site</p>
+          <ul className="space-y-2">
+            <li><Link href="#how-it-works" className="hover:text-white">How it works</Link></li>
+            <li><Link href="#service-area" className="hover:text-white">Service area</Link></li>
+            <li><Link href="#faq" className="hover:text-white">FAQ</Link></li>
+            <li><Link href="#quote" className="hover:text-white">Get a quote</Link></li>
+          </ul>
+        </nav>
+
+        <div className="text-sm">
+          <p className="eyebrow mb-3 text-white/50">Contact</p>
+          <p className="leading-relaxed">
+            Questions before you fill out the form? Reach us directly.
+          </p>
+          {/* Placeholder — swap in the real business phone/email. */}
+          <a href="tel:+15060000000" className="mt-2 block underline">
+            (506) 000-0000
+          </a>
+          <a href="mailto:hello@nextmove.ca" className="mt-1 block underline">
+            hello@nextmove.ca
+          </a>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10 py-5 text-xs text-white/50">
+        <div className="container max-w-content flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+          <p>© {new Date().getFullYear()} NextMove. Licensed &amp; insured. Fredericton, NB.</p>
+          <p>Serving Fredericton locally and the Maritimes long-distance.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
