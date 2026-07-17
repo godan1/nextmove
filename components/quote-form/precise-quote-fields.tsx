@@ -38,8 +38,21 @@ function NumberField({
         inputMode="numeric"
         min={0}
         max={max}
-        value={value}
-        onChange={(e) => onChange(Number(e.target.value))}
+        placeholder="0"
+        // Show blank instead of a literal "0" so typing a digit on mobile
+        // replaces it instead of appending next to it (which produced "05"
+        // when the field started at 0). Blur/empty falls back to 0.
+        value={value === 0 ? "" : value}
+        onFocus={(e) => e.target.select()}
+        onChange={(e) => {
+          const raw = e.target.value;
+          if (raw === "") {
+            onChange(0);
+            return;
+          }
+          const num = Number(raw);
+          onChange(Number.isFinite(num) ? num : 0);
+        }}
       />
     </div>
   );
