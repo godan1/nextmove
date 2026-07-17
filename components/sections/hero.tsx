@@ -17,7 +17,7 @@ export function Hero() {
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
             NextMove is a local, licensed &amp; insured moving company. Tell us about
-            your move and we'll email you our best rate.
+            your move and we&apos;ll email you our best rate.
           </p>
 
           <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
