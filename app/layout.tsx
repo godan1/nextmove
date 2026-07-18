@@ -3,6 +3,7 @@ import { Oswald, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const display = Oswald({
   subsets: ["latin"],
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );
