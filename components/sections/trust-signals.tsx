@@ -1,7 +1,7 @@
 const CHECKS = [
   {
-    title: "Licensed and insured",
-    body: "NextMove and our crew carry valid commercial insurance on every move, local or long-distance."
+    title: "Our own crew, every time",
+    body: "No subcontractors and no rotating cast of movers — the same trained NextMove crew handles your move start to finish."
   },
   {
     title: "One form, not five phone calls",

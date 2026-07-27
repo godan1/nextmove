@@ -3,6 +3,8 @@ import { Oswald, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
+import { ClarityAnalytics } from "@/components/analytics/clarity";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 
 const display = Oswald({
   subsets: ["latin"],
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s | NextMove"
   },
   description:
-    "NextMove is a local, licensed & insured moving company based in Fredericton, NB. Local moves in the Fredericton area and long-distance moves across the Maritimes. Free, no-obligation quotes.",
+    "NextMove is a local, full-service moving company based in Fredericton, NB. Local moves in the Fredericton area and long-distance moves across the Maritimes. Free, no-obligation quotes.",
   openGraph: {
     title: "NextMove | Local & Long-Distance Movers in Fredericton, NB",
     description:
@@ -48,6 +50,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
+        <ClarityAnalytics />
+        <GoogleAnalytics />
       </body>
     </html>
   );

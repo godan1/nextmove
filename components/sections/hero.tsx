@@ -16,7 +16,7 @@ export function Hero() {
             <span className="text-harbor">Stress-free</span>
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
-            NextMove is a local, licensed &amp; insured moving company. Tell us about
+            NextMove is a local, full-service moving company. Tell us about
             your move and we&apos;ll email you our best rate.
           </p>
 
