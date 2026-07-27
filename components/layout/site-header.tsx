@@ -24,6 +24,9 @@ export function SiteHeader() {
           <Link href="#service-area" className="rounded-sm px-3 py-2 hover:bg-ink/5">
             Service area
           </Link>
+          <Link href="#moving-tips" className="rounded-sm px-3 py-2 hover:bg-ink/5">
+            Moving tips
+          </Link>
           <Link href="#faq" className="rounded-sm px-3 py-2 hover:bg-ink/5">
             FAQ
           </Link>
