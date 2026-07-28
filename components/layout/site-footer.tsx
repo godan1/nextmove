@@ -3,7 +3,7 @@ import Link from "next/link";
 export function SiteFooter() {
   return (
     <footer className="border-t border-line bg-ink text-white/80">
-      <div className="container max-w-content grid gap-10 py-14 md:grid-cols-[1.2fr_1fr_1fr]">
+      <div className="container max-w-content grid gap-10 py-14 md:grid-cols-[1.2fr_1fr]">
         <div>
           <span className="font-display text-lg font-semibold tracking-stencil text-white">
             NextMove
@@ -25,20 +25,6 @@ export function SiteFooter() {
             <li><Link href="#quote" className="hover:text-white">Get a quote</Link></li>
           </ul>
         </nav>
-
-        <div className="text-sm">
-          <p className="eyebrow mb-3 text-white/50">Contact</p>
-          <p className="leading-relaxed">
-            Questions before you fill out the form? Reach us directly.
-          </p>
-          {/* Placeholder — swap in the real business phone/email. */}
-          <a href="tel:+15060000000" className="mt-2 block underline">
-            (506) 000-0000
-          </a>
-          <a href="mailto:hello@nextmove.ca" className="mt-1 block underline">
-            hello@nextmove.ca
-          </a>
-        </div>
       </div>
 
       <div className="border-t border-white/10 py-5 text-xs text-white/50">
